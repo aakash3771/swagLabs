@@ -1,0 +1,40 @@
+<properties>
+    <commonControls>
+        <cartIcon>//div[@id='shopping_cart_container']/a</cartIcon>
+        <numberOfItems>//div[@id='shopping_cart_container']/a/span</numberOfItems>
+        <leftMenu>//div[@class='bm-burger-button']</leftMenu>
+        <logOut>logout_sidebar_link</logOut>
+        <about>about_sidebar_link</about>
+        <allItems>inventory_sidebar_link</allItems>
+        <closeLeftMenu>//button[text()='Close Menu']</closeLeftMenu>
+    </commonControls>
+    <cartPage>
+        <continueShopping>//a[text()='Continue Shopping']</continueShopping>
+        <checkOut>//a[text()='CHECKOUT']</checkOut>
+    </cartPage>
+    <checkoutOverviewPage>
+        <cancel>//a[text()='CANCEL']</cancel>
+        <finish>//a[text()='FINISH']</finish>
+        <paymentInfo>//div[text()='Payment Information:']/following-sibling::div</paymentInfo>
+        <shippingInfo>//div[text()='Shipping Information:']/following-sibling::div</shippingInfo>
+        <itemTotalInfo>//div[@class='summary_subtotal_label']</itemTotalInfo>
+        <taxInfo>//div[@class='summary_tax_label']</taxInfo>
+        <totalInfo>//div[@class='summary_total_label']</totalInfo>
+    </checkoutOverviewPage>
+    <loginPage>
+    	<username>user-name</username>
+    	<password>password</password>
+    	<loginButton>//input[@value='LOGIN']</loginButton>
+    	<errorMessage>//h3[@data-test='error']</errorMessage>
+    </loginPage>
+    <checkOutPage>
+        <firstName>first-name</firstName>
+        <lastName>last-name</lastName>
+        <postalCode>postal-code</postalCode>
+        <continueButton>//input[@value='CONTINUE']</continueButton>
+    </checkOutPage>
+    <finishPage>
+        <pageTitle>//div[text()='Finish']</pageTitle>
+        <successMessage>//h2[text()='THANK YOU FOR YOUR ORDER']</successMessage>
+    </finishPage>
+</properties>
