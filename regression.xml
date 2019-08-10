@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Full Suite">
+
+	<test name="Validating Admin Role Assignment">
+		<classes>
+            <class name="TestClasses.EndToEnd"/>
+			<class name="TestClasses.LoginTests"/>
+		</classes>
+	</test>
+</suite> <!-- Suite -->
