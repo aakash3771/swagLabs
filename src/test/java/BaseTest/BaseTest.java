@@ -1,77 +1,49 @@
 package BaseTest;
 
+import Utilities.Log;
+import Utilities.PropertyReader;
 import Utilities.pathHelpers;
 import drivers.driverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
+import Utils.*;
 
-import java.io.File;
+import java.net.MalformedURLException;
 
 public class BaseTest{
-
-	private static final String currentDir = System.getProperty("user.dir");
 	protected WebDriver driver;
-	//protected ExtentTest test;
-	//protected ExtentReports extent;
 
-	//TODO will need to add logs
-
+public WebDriver getDriver()
+{
+	return driver;
+}
 	@BeforeSuite
-	public void CleanUp()
+	public void setup()
 	{
-		deleteFolder(pathHelpers.returnTestReportFolderPath());
-		System.out.println("Test reports folder deleted");
-		deleteFolder(pathHelpers.returnScreenShotFolderPath());
-		System.out.println("Screenshots folder deleted");
+		CleanUp();
 	}
-
-	private void deleteFolder(String folderPath) {
-		File dir = new File(folderPath);
-
-		if(!dir.isDirectory()) {
-			System.out.println("Not a directory. Do nothing");
-			return;
-		}
-		File[] listFiles = dir.listFiles();
-		assert listFiles != null;
-		for(File file : listFiles){
-			System.out.println("Deleting "+file.getName());
-			file.delete();
-		}
-	}
-
-	@AfterSuite
-	public void endReport() {
-		//extent.flush();
-		driver.quit();
+	private void CleanUp()
+	{
+		folderHelper.CreateDirectory(pathHelpers.returnScreenShotFolderPath());
+		folderHelper.deleteFolder(pathHelpers.returnScreenShotFolderPath());
+		folderHelper.CreateDirectory(pathHelpers.returnTestReportFolderPath());
+		folderHelper.deleteFolder(pathHelpers.returnTestReportFolderPath());
+		folderHelper.CreateDirectory(pathHelpers.returnLogsFolderPath());
+		//folderHelper.deleteFolder(pathHelpers.returnLogsFolderPath());
+		folderHelper.deleteFolder(pathHelpers.returnAllureFolderPath());
 	}
 
 	@AfterMethod(alwaysRun = true)
-	public void TearDown(){
+	public void TearDown() {
         driver.quit();
 	}
 
-	@BeforeMethod
-	public void SetUp()
-	{
-		driver = new driverFactory().getDriver();
+	@Parameters({ "platform","browser", "nodeURL" })
+	@BeforeMethod(alwaysRun=true)
+	public void startUp(@Optional("dfsdfsdf") String platform, @Optional("dfsdfsdf") String browser, @Optional("dfsdfsdf") String nodeURL) throws MalformedURLException {
+		if (PropertyReader.readApplicationFile("type").equals("solo"))
+			driver = new driverFactory().getDriver();
+		if (PropertyReader.readApplicationFile("type").equals("seleniumgrid"))
+		driver = new driverFactory().getRemoteDriver(platform, browser, nodeURL);
 	}
-/*
-	@BeforeTest
-	public void startReport() {
-		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(currentDir + File.separator + "Reports" + File.separator + "ExtentReport.html");
-		extent = new ExtentReports();  
-		extent.attachReporter(htmlReporter);
-
-		extent.setSystemInfo("Host Name", "Helm-Mac033");
-		extent.setSystemInfo("Environment", "LocalHost");
-		extent.setSystemInfo("Tester", "Aakash");
-		extent.setSystemInfo("App Name", "Paperless");
-		extent.setSystemInfo("Version", "19.1.1615");
-
-		htmlReporter.config().setDocumentTitle("Paperless Test Report"); 
-		htmlReporter.config().setReportName("Regression Testing"); 
-		htmlReporter.config().setTheme(Theme.DARK);
-	}
- */
 }

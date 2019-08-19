@@ -6,10 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class uiOperations {
-    private WebDriver driver;
     GenericMethods methods;
     public uiOperations(WebDriver driver) {
-        this.driver = driver;
         methods = new GenericMethods(driver);
     }
 

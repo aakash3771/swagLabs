@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="Full Suite">
-
-	<test name="Validating Admin Role Assignment">
+<suite name="regression" parallel="methods" thread-count="2">
+	<listeners>
+		<listener class-name="Utils.listener.customListener"/>
+		<listener class-name="Utils.listener.AnnotationTransformer"/>
+	</listeners>
+	<test name="Validating full functionality">
 		<classes>
             <class name="TestClasses.EndToEnd"/>
 			<class name="TestClasses.LoginTests"/>

@@ -5,7 +5,7 @@ import org.apache.poi.ss.usermodel.*;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class ExcelUtility {
+class ExcelUtility {
     public static String[][] getTestDataFromExcel(String testDataExcelFileName, String sheetName) throws IOException {
         FileInputStream stream = new FileInputStream(pathHelpers.returnTestDataPath() + testDataExcelFileName);
         Workbook workbook = WorkbookFactory.create(stream);

@@ -1,5 +1,6 @@
 package Utilities;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -98,17 +99,12 @@ public class GenericMethods {
 
         int size = elementList.size();
 
-        if (size > 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return size > 0;
     }
 
     public String getAttribute(String locator, String type, String attribute)
     {
-        return getElement(locator,type).getAttribute(attribute).toString();
+        return getElement(locator,type).getAttribute(attribute);
     }
 
     public int getSizeOfElements(String locator, String type)

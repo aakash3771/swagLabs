@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="Full Suite">
-
-	<test name="Validating Admin Role Assignment">
+<suite name="Smoke">
+	<listeners>
+		<listener class-name="Utils.listener.customListener"/>
+		<listener class-name="Utils.listener.AnnotationTransformer"/>
+	</listeners>
+	<test name="Checking if build is fine.">
 		<classes>
             <class name="TestClasses.EndToEnd"/>
 		</classes>

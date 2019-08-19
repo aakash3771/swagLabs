@@ -6,10 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class finishPage extends basePage{
-    private final By pageTitle = By.xpath(XMLReader.readPropertiesFile("//finishPage/pageTitle"));
     private final By successMessage = By.xpath(XMLReader.readPropertiesFile("//finishPage/successMessage"));
     public finishPage(WebDriver driver) throws DocumentException {
         super(driver);
+        By pageTitle = By.xpath(XMLReader.readPropertiesFile("//finishPage/pageTitle"));
         please.waitForVisibilityOfControl(driver.findElement(pageTitle));
     }
 

@@ -1,6 +1,7 @@
 package TestClasses;
 
 import BaseTest.BaseTest;
+import io.qameta.allure.Description;
 import org.dom4j.DocumentException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -9,7 +10,8 @@ import pageObjects.*;
 
 public class EndToEnd extends BaseTest{
 
-    @Test(dataProvider = "productSearch")
+    @Test(priority = 1, dataProvider = "productSearch")
+    @Description("To validate login, purchase and checkout process in one go.")
     public void ProductSearch(String username, String password, String productName, String quantityOfProduct,
                               String firstName, String lastName, String zipCode, String itemTotal, String totalInfo,
                               String taxInfo, String shippingInfo, String paymentInfo, String successMessage) throws DocumentException {

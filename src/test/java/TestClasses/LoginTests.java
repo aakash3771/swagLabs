@@ -1,6 +1,7 @@
 package TestClasses;
 
 import BaseTest.BaseTest;
+import io.qameta.allure.Description;
 import org.dom4j.DocumentException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -9,14 +10,16 @@ import pageObjects.loginPage;
 
 public class LoginTests extends BaseTest {
 
-    @Test(dataProvider = "ValidateLockedOutUser")
+    @Test(priority = 2, dataProvider = "ValidateLockedOutUser", groups = {"negative"})
+    @Description("To validate login for locked out user.")
     public void ValidateLockedOutUser(String username, String password, String errorMessage) throws DocumentException {
         loginPage login = new loginPage(driver);
         login.login(username, password);
         Assert.assertEquals(login.getErrorMessage(), errorMessage);
     }
 
-    @Test(dataProvider = "ValidLoginTests")
+    @Test(priority = 1, dataProvider = "ValidLoginTests", groups = {"positive"})
+    @Description("To validate login for different types of users.")
     public void ValidateStandardUser(String username, String password) throws DocumentException {
         loginPage login = new loginPage(driver);
         login.login(username, password);

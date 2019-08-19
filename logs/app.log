@@ -1,0 +1,6 @@
+11:51:17.107 INFO  drivers.driverFactory -Driver selected is chrome
+11:51:17.094 INFO  drivers.driverFactory -Driver selected is chrome
+11:51:22.471 INFO  Utilities.Log -ProductSearch test is starting.
+11:51:23.543 INFO  Utilities.Log -ValidateStandardUser test is starting.
+11:53:28.012 INFO  drivers.driverFactory -Driver selected is chrome
+11:53:32.011 INFO  Utilities.Log -ValidateLockedOutUser test is starting.

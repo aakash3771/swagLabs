@@ -1,0 +1,11 @@
+22:46:54.284 INFO  Utils.folderHelper -Deleting environment.properties
+22:46:57.802 INFO  drivers.driverFactory -Driver selected is chrome
+22:47:00.500 INFO  Utilities.Log -ProductSearch test is starting.
+22:50:18.434 INFO  drivers.driverFactory -Driver selected is chrome
+22:50:35.424 INFO  Utilities.Log -ProductSearch test is starting.
+22:59:54.348 INFO  drivers.driverFactory -Driver selected is chrome
+22:59:58.287 INFO  Utilities.Log -ProductSearch test is starting.
+23:00:22.054 INFO  pageObjects.cartPage -Quantity of product1is returned.
+23:03:20.720 INFO  drivers.driverFactory -Driver selected is chrome
+23:03:25.908 INFO  Utilities.Log -ProductSearch test is starting.
+23:04:01.065 INFO  pageObjects.cartPage -Quantity of product1is returned.

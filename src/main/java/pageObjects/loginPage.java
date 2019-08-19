@@ -1,6 +1,7 @@
 package pageObjects;
 
 import Utilities.XMLReader;
+import io.qameta.allure.Step;
 import org.dom4j.DocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,19 +17,20 @@ public class loginPage extends basePage{
         super(driver);
     }
 
+    @Step("Username is typed in with {0}.")
     public void setUserName(String userName) {
         ops.performAction(driver,"type", username, userName);
     }
-
+    @Step("Password is typed in with {0}.")
     public void setPassword(String passwordText) {
         ops.performAction(driver,"type", password, passwordText);
     }
-
+    @Step("Login button is clicked.")
     public productsPage clickLoginButton() throws DocumentException {
         ops.performAction(driver,"click", loginButton, null);
         return new productsPage(driver);
     }
-
+    @Step("Error message is returned.")
     public String getErrorMessage()
     {
         return ops.performAction(driver,"getText", errorMessage, null);

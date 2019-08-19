@@ -1,8 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4b5760e-467c-4d9c-95ca-b70955c13a44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestClasses/EndToEnd.java" afterDir="false" />
+    <list default="true" id="b4b5760e-467c-4d9c-95ca-b70955c13a44" name="Default Changelist" comment="added profiles to pom.xml">
+      <change afterPath="$PROJECT_DIR$/crossBrowserTesting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app-2019-08-17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selenium-server.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Resources/allure.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/SqlUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/Allure/AllureLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/Allure/AllureProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/ExtentReports/ExtentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/ExtentReports/ExtentTestManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/ScreenShotRobot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/folderHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/listener/AnnotationTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/listener/RetryAnalyser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/listener/customListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webdrivermanager.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/regression.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smoke.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Configs/Application.Properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Configs/Application.Properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/ExcelUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/ExcelUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/GenericMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/GenericMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/pathHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/pathHelpers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/uiOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/uiOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/drivers/driverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/drivers/driverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/basePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/basePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/cartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/cartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/checkOutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/checkOutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/checkoutOverviewPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/checkoutOverviewPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/finishPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/finishPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/loginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/loginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/productsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/productsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestClasses/EndToEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestClasses/EndToEnd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestClasses/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestClasses/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagLabs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/swagLabs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagLabs.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/swagLabs.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagLabs.iws" beforeDir="false" afterPath="$PROJECT_DIR$/swagLabs.iws" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,17 +55,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="JavaFXApplication" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="TestNG" name="LoginTests.ValidateLockedOutUser" />
-    </enabled-run-configurations>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -35,17 +71,35 @@
     </option>
   </component>
   <component name="ProjectId" id="1P5d0Grbm66OsUyeVXfVujiODgz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/drivers" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/Utils" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Utils" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/Utils" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java/drivers" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
-      <recent name="$PROJECT_DIR$/src/test/java" />
+      <recent name="$PROJECT_DIR$/src/test/java/Utils/ExtentReports" />
+      <recent name="$PROJECT_DIR$/src/test/java/Utils/Listeners" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Utils" />
+      <recent name="Utilities" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/Resources" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -60,50 +114,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.EndToEnd.ProductSearch">
-    <configuration name="EndToEnd.ProductSearch (3)" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG./Users/aakashgupta/IdeaProjects/swagLabs/regression.xml">
+    <configuration name="test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test2" />
       <module name="swagLabs" />
-      <option name="PACKAGE_NAME" value="TestClasses" />
-      <option name="MAIN_CLASS_NAME" value="TestClasses.EndToEnd" />
-      <option name="METHOD_NAME" value="ProductSearch" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EndToEnd.ProductSearch" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="swagLabs" />
-      <option name="PACKAGE_NAME" value="TestClasses" />
-      <option name="MAIN_CLASS_NAME" value="TestClasses.EndToEnd" />
-      <option name="METHOD_NAME" value="ProductSearch" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="swagLabs" />
-      <option name="PACKAGE_NAME" value="TestClasses" />
-      <option name="MAIN_CLASS_NAME" value="TestClasses.LoginTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTests.ValidateLockedOutUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="swagLabs" />
-      <option name="PACKAGE_NAME" value="TestClasses" />
-      <option name="MAIN_CLASS_NAME" value="TestClasses.LoginTests" />
-      <option name="METHOD_NAME" value="ValidateLockedOutUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,13 +134,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="/Users/aakashgupta/IdeaProjects/swagLabs/crossBrowserTesting.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="swagLabs" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/crossBrowserTesting.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/aakashgupta/IdeaProjects/swagLabs/regression.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="swagLabs" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/regression.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/aakashgupta/IdeaProjects/swagLabs/smoke.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="swagLabs" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/smoke.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.EndToEnd.ProductSearch" />
-        <item itemvalue="TestNG.LoginTests.ValidateLockedOutUser" />
-        <item itemvalue="TestNG.LoginTests" />
+        <item itemvalue="TestNG./Users/aakashgupta/IdeaProjects/swagLabs/regression.xml" />
+        <item itemvalue="TestNG./Users/aakashgupta/IdeaProjects/swagLabs/smoke.xml" />
+        <item itemvalue="TestNG./Users/aakashgupta/IdeaProjects/swagLabs/crossBrowserTesting.xml" />
+        <item itemvalue="Application.test2" />
         <item itemvalue="TestNG.LoginTests.ValidateStandardUser" />
-        <item itemvalue="TestNG.EndToEnd.ProductSearch (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -138,21 +182,67 @@
       <option name="presentableId" value="Default" />
       <updated>1565167666757</updated>
     </task>
+    <task id="LOCAL-00001" summary="added testng.xml files and updated pom.xml">
+      <created>1565436590540</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1565436590540</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="added testng.xml files and updated pom.xml" />
+    <MESSAGE value="added profiles to pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added profiles to pom.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/Utils/listener/RetryAnalyser.java</url>
+          <line>16</line>
+          <properties class="Utils.listener.RetryAnalyser" method="retry">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Utilities/XMLReader.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/cartPage.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/cartPage.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="TestNG">
         <watch expression="readXML(pathHelpers.returnPropertiesPackagePath(), node)" />
+      </configuration>
+      <configuration name="Application">
+        <watch expression="input.length()" />
+        <watch expression="originalArray" />
+        <watch expression="entry" />
+        <watch expression="entry.getValue()" />
       </configuration>
     </watches-manager>
   </component>
