@@ -2,29 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4b5760e-467c-4d9c-95ca-b70955c13a44" name="Default Changelist" comment="added profiles to pom.xml">
-      <change afterPath="$PROJECT_DIR$/crossBrowserTesting.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/app-2019-08-17.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-server.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Resources/allure.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/Log.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/SqlUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/Allure/AllureLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/Allure/AllureProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/ExtentReports/ExtentManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/ExtentReports/ExtentTestManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/ScreenShotRobot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/folderHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/listener/AnnotationTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/listener/RetryAnalyser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/listener/customListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webdrivermanager.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Debug.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Groups.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Parallel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/Test-Automaton-Report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extent-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-21 18:51:39.061.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-21 18:51:43.749.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-21 18:54:00.99.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-21 18:54:05.468.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 11:11:24.581.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 11:11:28.952.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 11:15:18.367.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 11:15:22.556.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 12:09:33.072.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 12:09:37.517.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 12:10:20.392.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 12:21:57.409.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 12:22:06.437.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 12:22:43.011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 12:57:17.746.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 12:57:21.732.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 12:58:33.498.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 12:58:37.523.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 13:10:11.211.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 13:10:15.02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 13:34:14.949.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/InvalidScenario2019-08-22 13:34:19.116.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/failedScreenshots/TestClasses.LoginTests/ValidateStandardUser2019-08-22 11:15:26.56.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/ExtentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/ExtentTestManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/listener/customReporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Utils/listener/customTestNGListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crossBrowserTesting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crossBrowserTesting.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app-2019-08-17.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/regression.xml" beforeDir="false" afterPath="$PROJECT_DIR$/regression.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/smoke.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/allure.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Configs/Application.Properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Configs/Application.Properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/ExcelUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/ExcelUtility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/GenericMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/GenericMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/pathHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/pathHelpers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/uiOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/uiOperations.java" afterDir="false" />
@@ -37,9 +54,16 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/loginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/loginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/productsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/productsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestClasses/EndToEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestClasses/EndToEnd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestClasses/EndToEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestClasses/ProductCheckOutTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestClasses/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestClasses/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/Allure/AllureLogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/Allure/AllureProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/ExtentReports/ExtentManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/ExtentReports/ExtentTestManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/ScreenShotRobot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/folderHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/folderHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/listener/RetryAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/listener/RetryAnalyser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/listener/customListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/listener/customListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagLabs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/swagLabs.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagLabs.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/swagLabs.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagLabs.iws" beforeDir="false" afterPath="$PROJECT_DIR$/swagLabs.iws" afterDir="false" />
@@ -61,7 +85,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="aakashgupta &lt;aakashol.com@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -77,29 +107,29 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/Utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/Resources" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/test" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="Utils" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test/java/Utils" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/main/java/drivers" />
-      <recent name="$PROJECT_DIR$/src/test/java/Utils/ExtentReports" />
-      <recent name="$PROJECT_DIR$/src/test/java/Utils/Listeners" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Utils" />
       <recent name="Utilities" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/Resources" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/test" />
+      <recent name="$PROJECT_DIR$/src/main/java/Utilities" />
+      <recent name="$PROJECT_DIR$/src/test/java/Utils" />
+      <recent name="$PROJECT_DIR$/src/main/java/drivers" />
+      <recent name="$PROJECT_DIR$/src/test/java/Utils/ExtentReports" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -114,36 +144,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG./Users/aakashgupta/IdeaProjects/swagLabs/regression.xml">
-    <configuration name="test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test2" />
-      <module name="swagLabs" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTests.ValidateStandardUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="swagLabs" />
-      <option name="PACKAGE_NAME" value="TestClasses" />
-      <option name="MAIN_CLASS_NAME" value="TestClasses.LoginTests" />
-      <option name="METHOD_NAME" value="ValidateStandardUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="/Users/aakashgupta/IdeaProjects/swagLabs/crossBrowserTesting.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="swagLabs" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/crossBrowserTesting.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG./Volumes/Second Driv/swagLabs/Groups.xml">
     <configuration name="/Users/aakashgupta/IdeaProjects/swagLabs/regression.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="swagLabs" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/regression.xml" />
@@ -164,13 +165,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="/Volumes/Second Driv/swagLabs/Debug.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="swagLabs" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/Debug.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Volumes/Second Driv/swagLabs/Groups.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="swagLabs" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/Groups.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Volumes/Second Driv/swagLabs/Parallel.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="swagLabs" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/Parallel.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG./Users/aakashgupta/IdeaProjects/swagLabs/regression.xml" />
+        <item itemvalue="TestNG./Volumes/Second Driv/swagLabs/Groups.xml" />
+        <item itemvalue="TestNG./Volumes/Second Driv/swagLabs/Debug.xml" />
+        <item itemvalue="TestNG./Volumes/Second Driv/swagLabs/Parallel.xml" />
         <item itemvalue="TestNG./Users/aakashgupta/IdeaProjects/swagLabs/smoke.xml" />
-        <item itemvalue="TestNG./Users/aakashgupta/IdeaProjects/swagLabs/crossBrowserTesting.xml" />
-        <item itemvalue="Application.test2" />
-        <item itemvalue="TestNG.LoginTests.ValidateStandardUser" />
+        <item itemvalue="TestNG./Users/aakashgupta/IdeaProjects/swagLabs/regression.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -192,6 +223,9 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -206,31 +240,41 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/faceswap" />
+    </ignored-roots>
     <MESSAGE value="added testng.xml files and updated pom.xml" />
     <MESSAGE value="added profiles to pom.xml" />
     <option name="LAST_COMMIT_MESSAGE" value="added profiles to pom.xml" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/Utils/listener/RetryAnalyser.java</url>
-          <line>16</line>
-          <properties class="Utils.listener.RetryAnalyser" method="retry">
+          <line>40</line>
+          <properties class="Utils.listener.RetryAnalyser" method="extendReportsFailOperations">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/Utils/listener/customListener.java</url>
+          <line>49</line>
+          <properties class="Utils.listener.customListener" method="onTestFailure">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/cartPage.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pageObjects/cartPage.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/src/test/java/BaseTest/BaseTest.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

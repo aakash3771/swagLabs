@@ -1,12 +1,11 @@
 package Utilities;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GenericMethods {
     private WebDriver driver;
@@ -17,73 +16,68 @@ public class GenericMethods {
 
     public WebElement getElement(String locator, String type) {
         type = type.toLowerCase();
-        if (type.equals("id")) {
-            System.out.println("Element found with id: " + locator);
-            return this.driver.findElement(By.id(locator));
-        }
-        else if (type.equals("name")) {
-            System.out.println("Element found with name: " + locator);
-            return this.driver.findElement(By.name(locator));
-        }
-        else if (type.equals("xpath")) {
-            System.out.println("Element found with xpath: " + locator);
-            return this.driver.findElement(By.xpath(locator));
-        }
-        else if (type.equals("css")) {
-            System.out.println("Element found with css: " + locator);
-            return this.driver.findElement(By.cssSelector(locator));
-        }
-        else if (type.equals("classname")) {
-            System.out.println("Element found with classname: " + locator);
-            return this.driver.findElement(By.className(locator));
-        }
-        else if (type.equals("tagname")) {
-            System.out.println("Element found with tagname: " + locator);
-            return this.driver.findElement(By.tagName(locator));
-        }
-        else if (type.equals("linktext")) {
-            System.out.println("Element found with link text: " + locator);
-            return this.driver.findElement(By.linkText(locator));
-        }
-        else if (type.equals("partiallinktext")) {
-            System.out.println("Element found with partial link text: " + locator);
-            return this.driver.findElement(By.partialLinkText(locator));
-        }
-        else {
-            System.out.println("Locator type not supported");
-            return null;
+        switch (type) {
+            case "id":
+                System.out.println("Element found with id: " + locator);
+                return this.driver.findElement(By.id(locator));
+            case "name":
+                System.out.println("Element found with name: " + locator);
+                return this.driver.findElement(By.name(locator));
+            case "xpath":
+                System.out.println("Element found with xpath: " + locator);
+                return this.driver.findElement(By.xpath(locator));
+            case "css":
+                System.out.println("Element found with css: " + locator);
+                return this.driver.findElement(By.cssSelector(locator));
+            case "classname":
+                System.out.println("Element found with classname: " + locator);
+                return this.driver.findElement(By.className(locator));
+            case "tagname":
+                System.out.println("Element found with tagname: " + locator);
+                return this.driver.findElement(By.tagName(locator));
+            case "linktext":
+                System.out.println("Element found with link text: " + locator);
+                return this.driver.findElement(By.linkText(locator));
+            case "partiallinktext":
+                System.out.println("Element found with partial link text: " + locator);
+                return this.driver.findElement(By.partialLinkText(locator));
+            default:
+                System.out.println("Locator type not supported");
+                return null;
         }
     }
 
     public List<WebElement> getElementList(String locator, String type) {
         type = type.toLowerCase();
-        List<WebElement> elementList = new ArrayList<WebElement>();
-        if (type.equals("id")) {
-            elementList = this.driver.findElements(By.id(locator));
-        }
-        else if (type.equals("name")) {
-            elementList = this.driver.findElements(By.name(locator));
-        }
-        else if (type.equals("xpath")) {
-            elementList = this.driver.findElements(By.xpath(locator));
-        }
-        else if (type.equals("css")) {
-            elementList = this.driver.findElements(By.cssSelector(locator));
-        }
-        else if (type.equals("classname")) {
-            elementList = this.driver.findElements(By.className(locator));
-        }
-        else if (type.equals("tagname")) {
-            elementList = this.driver.findElements(By.tagName(locator));
-        }
-        else if (type.equals("linktext")) {
-            elementList = this.driver.findElements(By.linkText(locator));
-        }
-        else if (type.equals("partiallinktext")) {
-            elementList = this.driver.findElements(By.partialLinkText(locator));
-        }
-        else {
-            System.out.println("Locator type not supported");
+        List<WebElement> elementList = new ArrayList<>();
+        switch (type) {
+            case "id":
+                elementList = this.driver.findElements(By.id(locator));
+                break;
+            case "name":
+                elementList = this.driver.findElements(By.name(locator));
+                break;
+            case "xpath":
+                elementList = this.driver.findElements(By.xpath(locator));
+                break;
+            case "css":
+                elementList = this.driver.findElements(By.cssSelector(locator));
+                break;
+            case "classname":
+                elementList = this.driver.findElements(By.className(locator));
+                break;
+            case "tagname":
+                elementList = this.driver.findElements(By.tagName(locator));
+                break;
+            case "linktext":
+                elementList = this.driver.findElements(By.linkText(locator));
+                break;
+            case "partiallinktext":
+                elementList = this.driver.findElements(By.partialLinkText(locator));
+                break;
+            default:
+                System.out.println("Locator type not supported");
+                break;
         }
         if (elementList.isEmpty()) {
             System.out.println("Element not found with " + type +": " + locator);
@@ -110,13 +104,16 @@ public class GenericMethods {
     public int getSizeOfElements(String locator, String type)
     {
         List<WebElement> elementList = getElementList(locator, type);
-
-        return elementList.size();
+        int size = elementList.size();
+        ExtentTestManager.getTest().info("Number of elements is " + size);
+        return size;
     }
 
     public String getVisibleText(String locator, String type)
     {
-        return getElement(locator, type).getText();
+        String text = getElement(locator, type).getText();
+        ExtentTestManager.getTest().info("Visible text from control is " + text);
+        return text;
     }
 
     public int convertStringToInteger(String text)
@@ -126,6 +123,8 @@ public class GenericMethods {
 
     public String getSubString(String text, String cutoff)
     {
-        return text.substring(text.lastIndexOf(cutoff)+1);
+        String subText = text.substring(text.lastIndexOf(cutoff) + 1);
+        ExtentTestManager.getTest().info("Sub text of " + text + " is " + subText);
+        return subText;
     }
 }

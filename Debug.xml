@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Smoke">
+    <listeners>
+        <listener class-name="Utils.listener.customListener"/>
+        <listener class-name="Utils.listener.AnnotationTransformer"/>
+        <listener class-name="Utils.listener.customReporter"/>
+        <listener class-name="Utils.listener.customTestNGListener"/>
+    </listeners>
+    <test name="Debug method">
+        <classes>
+            <class name="TestClasses.LoginTests"/>
+            <methods>
+                <!--include name="InvalidScenario"/-->
+            </methods>
+        </classes>
+    </test>
+</suite> <!-- Suite -->

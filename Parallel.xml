@@ -1,0 +1,24 @@
+<suite name="Parallel" parallel="classes" thread-count="2">
+
+    <listeners>
+        <listener class-name="Utils.listener.customListener"/>
+        <listener class-name="Utils.listener.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="Validating full functionality on firefox">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="TestClasses.ProductCheckOutTests"/>
+            <class name="TestClasses.LoginTests"/>
+        </classes>
+    </test>
+
+    <test name="Validating full functionality on chrome">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="TestClasses.ProductCheckOutTests"/>
+            <class name="TestClasses.LoginTests"/>
+        </classes>
+    </test>
+
+</suite>

@@ -4,6 +4,11 @@ import java.io.File;
 
 public class pathHelpers {
 	private static final String currentDir = System.getProperty("user.dir");
+	private static String fileSeperator = System.getProperty("file.separator");
+
+	public static String fileSeperator() {
+		return fileSeperator;
+	}
 
 	public static String returnConfigsPath()
 	{
@@ -30,11 +35,6 @@ public class pathHelpers {
 	public static String returnScreenShotFolderPath()
 	{
 		return currentDir + File.separator + "failedScreenshots" + File.separator;
-	}
-
-	public static String returnAllureFolderPath()
-	{
-		return currentDir + File.separator + "allure-results" + File.separator;
 	}
 	
 	public static String returnTestReportFolderPath()

@@ -28,8 +28,8 @@ public class driverFactory {
 	 * driver is initiliazed. Which browser and URL has to be used is mentioned in Application.Properties file.
 	 *
 	 */
-	private void initializeDriver() {
-		switch (PropertyReader.readApplicationFile("browser")) {
+	private void initializeDriver(String browser) {
+		switch (browser) {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
@@ -41,6 +41,7 @@ public class driverFactory {
 		case "firefox":
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
+			log.info("Driver selected is chrFirefoxome");
 			//System.out.println("Driver selected is Firefox");
 			break;
 		case "IE":
@@ -87,12 +88,13 @@ public class driverFactory {
 
 	/**
 	 * @return the browser
+	 * @param browser
 	 */
-	public WebDriver getDriver()
+	public WebDriver getDriver(String browser)
 	{
 		if(driver != null)
 		return driver;
-		initializeDriver();
+		initializeDriver(browser);
 		return driver;
 	}
 

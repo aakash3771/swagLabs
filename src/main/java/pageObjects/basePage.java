@@ -1,10 +1,13 @@
 package pageObjects;
 
+import Utilities.ExplicitWait;
+import Utilities.GenericMethods;
+import Utilities.XMLReader;
+import Utilities.uiOperations;
 import io.qameta.allure.Step;
 import org.dom4j.DocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import Utilities.*;
 
 public class basePage {
     WebDriver driver;
@@ -32,18 +35,17 @@ public class basePage {
      */
     public void clickAllItems()
     {
-        ops.performAction(driver,"click", allItems, null);
+        ops.performAction(driver, "click", allItems, "All Items", "");
     }
 
     public void clickCloseLeftMenu()
     {
-        ops.performAction(driver,"click", closeLeftMenu, null);
+        ops.performAction(driver, "click", closeLeftMenu, "Left Menu close icon", "");
     }
 
-    @Step("Log out link is clicked.")
     public void clickLogOut()
     {
-        ops.performAction(driver,"click", logOut, null);
+        ops.performAction(driver, "click", logOut, "Logout link", "");
     }
 
     /**
@@ -51,7 +53,7 @@ public class basePage {
      */
     public void clickAbout()
     {
-        ops.performAction(driver,"click", about, null);
+        ops.performAction(driver, "click", about, "About link", null);
     }
 
     /**
@@ -59,18 +61,18 @@ public class basePage {
      */
     @Step("Cart icon is clicked.")
     public cartPage clickCartIcon() throws DocumentException {
-        ops.performAction(driver,"click", cartIcon, null);
+        ops.performAction(driver, "click", cartIcon, "Cart icon", null);
         return new cartPage(driver);
     }
 
     @Step("Left menu is opened.")
     public void clickLeftMenu()
     {
-        ops.performAction(driver,"click", leftMenu, null);
+        ops.performAction(driver, "click", leftMenu, "Left menu", null);
     }
 
     public String getNumberOfItemsInCart()
     {
-        return ops.performAction(driver,"getText", numberOfItems, null);
+        return ops.performAction(driver, "getText", numberOfItems, "Cart icon", null);
     }
 }

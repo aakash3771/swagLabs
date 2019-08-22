@@ -1,12 +1,11 @@
 package BaseTest;
 
-import Utilities.Log;
 import Utilities.PropertyReader;
+import Utilities.folderHelper;
 import Utilities.pathHelpers;
 import drivers.driverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-import Utils.*;
 
 import java.net.MalformedURLException;
 
@@ -29,8 +28,7 @@ public WebDriver getDriver()
 		folderHelper.CreateDirectory(pathHelpers.returnTestReportFolderPath());
 		folderHelper.deleteFolder(pathHelpers.returnTestReportFolderPath());
 		folderHelper.CreateDirectory(pathHelpers.returnLogsFolderPath());
-		//folderHelper.deleteFolder(pathHelpers.returnLogsFolderPath());
-		folderHelper.deleteFolder(pathHelpers.returnAllureFolderPath());
+		folderHelper.deleteFolder(pathHelpers.returnLogsFolderPath());
 	}
 
 	@AfterMethod(alwaysRun = true)
@@ -40,9 +38,9 @@ public WebDriver getDriver()
 
 	@Parameters({ "platform","browser", "nodeURL" })
 	@BeforeMethod(alwaysRun=true)
-	public void startUp(@Optional("dfsdfsdf") String platform, @Optional("dfsdfsdf") String browser, @Optional("dfsdfsdf") String nodeURL) throws MalformedURLException {
+	public void startUp(@Optional("Mac") String platform, @Optional("chrome") String browser, @Optional(" ") String nodeURL) throws MalformedURLException {
 		if (PropertyReader.readApplicationFile("type").equals("solo"))
-			driver = new driverFactory().getDriver();
+			driver = new driverFactory().getDriver(browser);
 		if (PropertyReader.readApplicationFile("type").equals("seleniumgrid"))
 		driver = new driverFactory().getRemoteDriver(platform, browser, nodeURL);
 	}

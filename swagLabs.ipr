@@ -16,7 +16,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
   </component>
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="InspectionProjectProfileManager">
     <profile version="1.0">
       <option name="myName" value="Project Default" />
@@ -40,32 +39,28 @@
       </list>
     </option>
   </component>
-  <component name="ProjectDictionaryState">
-    <dictionary name="aakashgupta">
-      <words>
-        <w>cellcount</w>
-        <w>rowcount</w>
-      </words>
-    </dictionary>
-  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/swagLabs.iml" filepath="$PROJECT_DIR$/swagLabs.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/classes" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="" vcs="Git" />
   </component>
   <component name="libraryTable">
-    <library name="dom4j-2.1.1">
+    <library name="Maven: com.aventstack:extentreports:3.1.5">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/dom4j-2.1.1.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/" />
       </CLASSES>
-      <JAVADOC />
-      <SOURCES />
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/aventstack/extentreports/3.1.5/extentreports-3.1.5-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/aventstack/extentreports/3.1.5/extentreports-3.1.5-sources.jar!/" />
+      </SOURCES>
     </library>
     <library name="Maven: com.beust:jcommander:1.27">
       <CLASSES>
@@ -175,17 +170,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: com.relevantcodes:extentreports:2.41.2">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: com.squareup.okhttp3:okhttp:3.11.0">
@@ -408,6 +392,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.10/httpcore-4.4.10-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: org.apache.httpcomponents:httpmime:4.5.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: org.apache.logging.log4j:log4j-api:2.12.1">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.12.1/log4j-api-2.12.1.jar!/" />
@@ -584,37 +579,37 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.mongodb:bson:3.0.4">
+    <library name="Maven: org.mongodb:bson:3.3.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/bson/3.0.4/bson-3.0.4.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/bson/3.3.0/bson-3.3.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/bson/3.0.4/bson-3.0.4-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/bson/3.3.0/bson-3.3.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/bson/3.0.4/bson-3.0.4-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/bson/3.3.0/bson-3.3.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.mongodb:mongodb-driver-core:3.0.4">
+    <library name="Maven: org.mongodb:mongodb-driver-core:3.3.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.0.4/mongodb-driver-core-3.0.4.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.0.4/mongodb-driver-core-3.0.4-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.0.4/mongodb-driver-core-3.0.4-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.mongodb:mongodb-driver:3.0.4">
+    <library name="Maven: org.mongodb:mongodb-driver:3.3.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver/3.0.4/mongodb-driver-3.0.4.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver/3.0.4/mongodb-driver-3.0.4-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver/3.0.4/mongodb-driver-3.0.4-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.rauschig:jarchivelib:1.0.0">
@@ -771,17 +766,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8/testng-6.8-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.xerial:sqlite-jdbc:3.8.11.1">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.8.11.1/sqlite-jdbc-3.8.11.1.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.8.11.1/sqlite-jdbc-3.8.11.1-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.8.11.1/sqlite-jdbc-3.8.11.1-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: org.yaml:snakeyaml:1.6">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.6/snakeyaml-1.6.jar!/" />
@@ -792,20 +776,6 @@
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.6/snakeyaml-1.6-sources.jar!/" />
       </SOURCES>
-    </library>
-    <library name="selenium-server-standalone-3.141.59">
-      <CLASSES>
-        <root url="jar://$PROJECT_DIR$/selenium-server-standalone-3.141.59.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
-    <library name="webdrivermanager-3.6.2-fat">
-      <CLASSES>
-        <root url="jar://$PROJECT_DIR$/webdrivermanager-3.6.2-fat.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
     </library>
   </component>
 </project>

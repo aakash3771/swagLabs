@@ -1,31 +1,41 @@
 package TestClasses;
 
 import BaseTest.BaseTest;
-import io.qameta.allure.Description;
+import Utilities.ExtentTestManager;
 import org.dom4j.DocumentException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pageObjects.loginPage;
 
+import java.lang.reflect.Method;
+
 public class LoginTests extends BaseTest {
 
-    @Test(priority = 2, dataProvider = "ValidateLockedOutUser", groups = {"negative"})
-    @Description("To validate login for locked out user.")
-    public void ValidateLockedOutUser(String username, String password, String errorMessage) throws DocumentException {
+    @Test(priority = 2, dataProvider = "ValidateLockedOutUser", groups = {"positive"})
+    public void ValidateLockedOutUser(String username, String password, String errorMessage, Method method) throws DocumentException {
+        ExtentTestManager.getTest().assignCategory(LoginTests.class.getName());
         loginPage login = new loginPage(driver);
         login.login(username, password);
-        Assert.assertEquals(login.getErrorMessage(), errorMessage);
+        Assert.assertEquals(login.getErrorMessageLocator(), errorMessage);
     }
 
     @Test(priority = 1, dataProvider = "ValidLoginTests", groups = {"positive"})
-    @Description("To validate login for different types of users.")
-    public void ValidateStandardUser(String username, String password) throws DocumentException {
+    public void ValidateStandardUser(String username, String password, Method method) throws DocumentException {
+        ExtentTestManager.getTest().assignCategory(LoginTests.class.getName());
         loginPage login = new loginPage(driver);
         login.login(username, password);
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
         login.clickLeftMenu();
         login.clickLogOut();
+    }
+
+    @Test(priority = 3, dataProvider = "ValidateLockedOutUser", groups = {"negative"})
+    public void InvalidScenario(String username, String password, Method method) throws DocumentException {
+        ExtentTestManager.getTest().assignCategory(LoginTests.class.getName());
+        loginPage login = new loginPage(driver);
+        login.login(username, password);
+        Assert.assertTrue(false);
     }
 
     @DataProvider(name ="ValidateLockedOutUser")

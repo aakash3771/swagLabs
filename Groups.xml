@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<suite name="groups testing">
 
-<suite name="regression">
 	<listeners>
 		<listener class-name="Utils.listener.customListener"/>
 		<listener class-name="Utils.listener.AnnotationTransformer"/>
 	</listeners>
+
+	<groups>
+		<run>
+			<include name = "positive" />
+		</run>
+	</groups>
+
 	<test name="Validating full functionality">
 		<classes>
-            <class name="TestClasses.ProductCheckOutTests"/>
+			<class name="TestClasses.ProductCheckOutTests"/>
 			<class name="TestClasses.LoginTests"/>
 		</classes>
 	</test>
+
 </suite> <!-- Suite -->

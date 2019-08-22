@@ -1,24 +1,23 @@
 package TestClasses;
 
 import BaseTest.BaseTest;
-import io.qameta.allure.Description;
+import Utilities.ExtentTestManager;
 import org.dom4j.DocumentException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pageObjects.*;
 
-public class EndToEnd extends BaseTest{
+public class ProductCheckOutTests extends BaseTest {
 
     @Test(priority = 1, dataProvider = "productSearch")
-    @Description("To validate login, purchase and checkout process in one go.")
     public void ProductSearch(String username, String password, String productName, String quantityOfProduct,
                               String firstName, String lastName, String zipCode, String itemTotal, String totalInfo,
                               String taxInfo, String shippingInfo, String paymentInfo, String successMessage) throws DocumentException {
-        //test = extent.createTest("Validate Product Search functionality");
+        ExtentTestManager.getTest().assignCategory(ProductCheckOutTests.class.getName());
         loginPage login = new loginPage(driver);
         login.setUserName(username);
-        login.setPassword(password);
+        login.setPasswordLocator(password);
         productsPage product = login.clickLoginButton();
         product.addProductToCart(productName);
         Assert.assertEquals(product.getNumberOfItemsInCart(), "1");

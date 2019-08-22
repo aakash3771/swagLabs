@@ -7,7 +7,8 @@ import org.openqa.selenium.WebDriver;
 
 public class finishPage extends basePage{
     private final By successMessage = By.xpath(XMLReader.readPropertiesFile("//finishPage/successMessage"));
-    public finishPage(WebDriver driver) throws DocumentException {
+
+    finishPage(WebDriver driver) throws DocumentException {
         super(driver);
         By pageTitle = By.xpath(XMLReader.readPropertiesFile("//finishPage/pageTitle"));
         please.waitForVisibilityOfControl(driver.findElement(pageTitle));
@@ -15,6 +16,6 @@ public class finishPage extends basePage{
 
     public String getSuccessMessage()
     {
-        return ops.performAction(driver,"getText", successMessage, null);
+        return ops.performAction(driver, "getText", successMessage, "Success message", null);
     }
 }

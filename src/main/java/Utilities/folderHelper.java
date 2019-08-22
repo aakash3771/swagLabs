@@ -1,6 +1,5 @@
-package Utils;
+package Utilities;
 
-import Utilities.pathHelpers;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,7 +12,6 @@ public class folderHelper {
         File dir = new File(folderPath);
 
         if (!dir.isDirectory()) {
-            //System.out.println("Not a directory. Do nothing");
             log.info("Not a directory. Do nothing");
             return;
         }
@@ -37,6 +35,8 @@ public class folderHelper {
                 log.error(folderPath + " creation failed.");
             }
         }
+        else
+            System.out.println("Directory already exists: " + folderPath);
 
         // Method to create sub directories
             /*File files = new File("C:\\Directory2\\Sub2\\Sub-Sub2");

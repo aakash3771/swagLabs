@@ -1,21 +1,31 @@
 package Utils.listener;
 
 import BaseTest.BaseTest;
-import Utils.ExtentReports.ExtentTestManager;
-import com.relevantcodes.extentreports.LogStatus;
+import Utilities.ExtentTestManager;
+import Utilities.folderHelper;
+import Utilities.pathHelpers;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
-public class RetryAnalyser implements IRetryAnalyzer {
+import java.io.File;
+import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.Date;
+
+public class RetryAnalyser extends BaseTest implements IRetryAnalyzer {
     private int counter = 0;
-    int retryLimit = 1;
 
     @Override
     public boolean retry(ITestResult result) {
         if (!result.isSuccess()) {                      //Check if test not succeed
+            int retryLimit = 1;
             if (counter < retryLimit) {                            //Check if maxtry count is reached
                 counter++;                                     //Increase the maxTry count by 1
                 result.setStatus(ITestResult.FAILURE);  //Mark test as failed and take base64Screenshot
@@ -28,11 +38,27 @@ public class RetryAnalyser implements IRetryAnalyzer {
         return false;
     }
 
-    public void extendReportsFailOperations(ITestResult iTestResult) {
+    private void extendReportsFailOperations(ITestResult iTestResult) {
         Object testClass = iTestResult.getInstance();
         WebDriver webDriver = ((BaseTest) testClass).getDriver();
-        String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.BASE64);
-        ExtentTestManager.getTest().log(LogStatus.FAIL, "Test Failed",
-                ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));
+        String testClassName = iTestResult.getInstanceName();
+        String timeStamp = String.valueOf(new Timestamp(new Date().getTime()));
+        String testMethodName = iTestResult.getName();
+        String screenShotName = testMethodName + timeStamp + ".png";
+        try {
+            folderHelper.CreateDirectory(pathHelpers.returnScreenShotFolderPath()
+                    + pathHelpers.fileSeperator() + testClassName + pathHelpers.fileSeperator());
+
+            File source = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);
+            File destination = new File(pathHelpers.returnScreenShotFolderPath() + pathHelpers.fileSeperator()
+                    + testClassName + pathHelpers.fileSeperator() + screenShotName);
+            FileUtils.copyFile(source, destination);
+            ExtentTestManager.getTest().fail("Screenshot", MediaEntityBuilder.createScreenCaptureFromPath(
+                    pathHelpers.returnScreenShotFolderPath() + pathHelpers.fileSeperator() + testClassName
+                            + pathHelpers.fileSeperator() + screenShotName).build());
+        } catch (WebDriverException | IOException e) {
+            e.printStackTrace();
+        }
+        ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
     }
 }

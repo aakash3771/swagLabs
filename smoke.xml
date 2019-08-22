@@ -7,7 +7,7 @@
 	</listeners>
 	<test name="Checking if build is fine.">
 		<classes>
-            <class name="TestClasses.EndToEnd"/>
+            <class name="TestClasses.ProductCheckOutTests"/>
 		</classes>
 	</test>
 </suite> <!-- Suite -->

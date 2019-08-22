@@ -1,102 +1,83 @@
 package Utils.listener;
 
 import BaseTest.BaseTest;
-import Utilities.Log;
-import Utils.ExtentReports.ExtentManager;
-import Utils.ExtentReports.ExtentTestManager;
-import com.relevantcodes.extentreports.LogStatus;
-import io.qameta.allure.Attachment;
+import Utilities.ExtentManager;
+import Utilities.ExtentTestManager;
+import Utilities.folderHelper;
+import Utilities.pathHelpers;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.testng.*;
+import org.openqa.selenium.WebDriverException;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+import java.io.File;
+import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.Date;
 
 public class customListener extends BaseTest implements ITestListener {
-    private static String getTestMethodName(ITestResult iTestResult) {
-        return iTestResult.getMethod().getConstructorOrMethod().getName();
+    private static ExtentReports extent = ExtentManager.createInstance();
+    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+
+    public synchronized void onStart(ITestContext context) {
+        System.out.println("*** Test Suite " + context.getName() + " started ***");
     }
 
-    //Text attachments for Allure
-    @Attachment(value = "Page screenshot", type = "image/png")
-    private byte[] saveScreenshotPNG(WebDriver driver) {
-        return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+    public synchronized void onFinish(ITestContext context) {
+        System.out.println(("*** Test Suite " + context.getName() + " ending ***"));
+        //ExtentTestManager.endTest();//TODO check if this change makes any diff and then uncomment and try again. Note diff.
+        ExtentManager.getInstance().flush();
     }
 
-    //Text attachments for Allure
-    @Attachment(value = "{0}", type = "text/plain")
-    public static String saveTextLog (String message) {
-        return message;
+    public synchronized void onTestStart(ITestResult result) {
+        System.out.println(("*** Running test method " + result.getMethod().getMethodName() + "..."));
+        ExtentTestManager.startTest(result.getMethod().getMethodName());
     }
 
-    //HTML attachments for Allure
-    @Attachment(value = "{0}", type = "text/html")
-    public static String attachHtml(String html) {
-        return html;
+    public synchronized void onTestSuccess(ITestResult result) {
+        System.out.println("*** Executed " + result.getMethod().getMethodName() + " test successfully...");
+        ExtentTestManager.getTest().log(Status.PASS, "Test passed");
     }
 
-    @Override
-    public void onStart(ITestContext iTestContext) {
-        System.out.println("I am in onStart method " + iTestContext.getName());
-        iTestContext.setAttribute("WebDriver", this.driver);
-    }
+    public synchronized void onTestFailure(ITestResult result) {
+        ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
 
-    @Override
-    public void onFinish(ITestContext iTestContext) {
-        System.out.println("I am in onFinish method " + iTestContext.getName());
-        //Do tier down operations for extentreports reporting!
-        ExtentTestManager.endTest();
-        ExtentManager.getReporter().flush();
-    }
+        Object testClass = result.getInstance();
+        WebDriver webDriver = ((BaseTest) testClass).getDriver();
+        String testClassName = result.getInstanceName();
+        String timeStamp = String.valueOf(new Timestamp(new Date().getTime()));
+        String testMethodName = result.getName();
+        String screenShotName = testMethodName + timeStamp + ".png";
+        try {
+            folderHelper.CreateDirectory(pathHelpers.returnScreenShotFolderPath()
+                    + pathHelpers.fileSeperator() + testClassName + pathHelpers.fileSeperator());
 
-    @Override
-    public void onTestStart(ITestResult iTestResult) {
-        System.out.println("I am in onTestStart method " +  getTestMethodName(iTestResult) + " start");
-        Log.info(getTestMethodName(iTestResult) + " test is starting.");
-        //Start operation for extentreports.
-        ExtentTestManager.startTest(iTestResult.getMethod().getMethodName(),"");
-    }
-
-    @Override
-    public void onTestSuccess(ITestResult iTestResult) {
-        System.out.println("I am in onTestSuccess method " +  getTestMethodName(iTestResult) + " succeed");
-        //Extentreports log operation for passed tests.
-        ExtentTestManager.getTest().log(LogStatus.PASS, "Test passed");
-    }
-
-    @Override
-    public void onTestFailure(ITestResult iTestResult) {
-        System.out.println("I am in onTestFailure method " +  getTestMethodName(iTestResult) + " failed");
-
-        //Get driver from BaseTest and assign to local webdriver variable.
-        Object testClass = iTestResult.getInstance();
-        WebDriver driver = ((BaseTest) testClass).getDriver();
-
-        //Allure ScreenShotRobot and SaveTestLog
-        if (driver != null) {
-            System.out.println("Screenshot captured for test case:" + getTestMethodName(iTestResult));
-            saveScreenshotPNG(driver);
+            File source = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);
+            File destination = new File(pathHelpers.returnScreenShotFolderPath() + pathHelpers.fileSeperator()
+                    + testClassName + pathHelpers.fileSeperator() + screenShotName);
+            FileUtils.copyFile(source, destination);
+            ExtentTestManager.getTest().fail("Screenshot", MediaEntityBuilder.createScreenCaptureFromPath(
+                    pathHelpers.returnScreenShotFolderPath() + pathHelpers.fileSeperator() + testClassName
+                            + pathHelpers.fileSeperator() + screenShotName).build());
+        } catch (WebDriverException | IOException e) {
+            e.printStackTrace();
         }
-
-        //Save a log on allure.
-        saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");
-
-        //Take base64Screenshot screenshot for extent reports
-        String base64Screenshot = "data:image/png;base64,"+((TakesScreenshot)driver).
-                getScreenshotAs(OutputType.BASE64);
-
-        //Extentreports log and screenshot operations for failed tests.
-        ExtentTestManager.getTest().log(LogStatus.FAIL,"Test Failed",
-                ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));
     }
 
-    @Override
-    public void onTestSkipped(ITestResult iTestResult) {
-        System.out.println("I am in onTestSkipped method "+  getTestMethodName(iTestResult) + " skipped");
-        //Extentreports log operation for skipped tests.
-        ExtentTestManager.getTest().log(LogStatus.SKIP, "Test Skipped");
+    public synchronized void onTestSkipped(ITestResult result) {
+        System.out.println("*** Test " + result.getMethod().getMethodName() + " skipped...");
+        ExtentTestManager.getTest().log(Status.SKIP, "Test Skipped");
     }
 
-    @Override
-    public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
-        System.out.println("Test failed but it is in defined success ratio " + getTestMethodName(iTestResult));
-    }}
+    public synchronized void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+        System.out.println("*** Test failed but within percentage % " + result.getMethod().getMethodName());
+    }
+}

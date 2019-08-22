@@ -1,24 +1,28 @@
 <suite name="cross browser testing" parallel="tests" thread-count="2">
+
 	<listeners>
 		<listener class-name="Utils.listener.customListener"/>
 		<listener class-name="Utils.listener.AnnotationTransformer"/>
 	</listeners>
+
 	<test name="Validating on chrome">
 		<parameter name="browser" value="chrome"/>
 		<parameter name="platform" value="Windows" />
 		<parameter name="nodeURL" value="http://10.211.55.11:5051/wd/hub" />
 		<classes>
-            <class name="TestClasses.EndToEnd"/>
+            <class name="TestClasses.ProductCheckOutTests"/>
 			<class name="TestClasses.LoginTests"/>
 		</classes>
 	</test>
+
 	<test name="Validating on firefox">
 		<parameter name="browser" value="firefox" />
 		<parameter name="platform" value="mac" />
 		<parameter name="nodeURL" value="http://10.211.55.11:5052/wd/hub" />
 		<classes>
-			<class name="TestClasses.EndToEnd"/>
+            <class name="TestClasses.ProductCheckOutTests"/>
 			<class name="TestClasses.LoginTests"/>
 		</classes>
 	</test>
+
 </suite>
