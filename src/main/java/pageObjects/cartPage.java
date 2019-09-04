@@ -1,6 +1,7 @@
 package pageObjects;
 
 import Utilities.XMLReader;
+import Utilities.constants;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.dom4j.DocumentException;
@@ -17,29 +18,29 @@ public class cartPage extends basePage{
     }
 
     public productsPage clickContinueShopping() throws DocumentException {
-        ops.performAction(driver, "click", continueShopping, "Continue button", null);
+        ops.performAction(constants.click, continueShopping, "Continue button", null);
         return new productsPage(driver);
     }
 
     public checkOutPage clickCheckOut() throws DocumentException {
-        ops.performAction(driver, "click", checkOut, "Checkout button", null);
+        ops.performAction(constants.click, checkOut, "Checkout button", null);
         return new checkOutPage(driver);
     }
 
     public int verifyNumberOfUniqueItemsInCart()
     {
-        return method.getSizeOfElements("//div[@class='cart_item']", "xpath");
+        return ops.getSizeOfElements("//div[@class='cart_item']", "xpath");
     }
 
     public String checkQuantityOfProduct(String productName)
     {
         String locator = "//div[text()='"+productName+"']/parent::a/parent::div/preceding-sibling::div";
-        return method.getVisibleText(locator,"xpath");
+        return ops.getVisibleText(locator,"xpath");
     }
 
     public boolean isProductInCart(String productName)
     {
-        return method.isElementPresent("//div[text()='"+productName+"']","xpath");
+        return ops.isElementPresent("//div[text()='"+productName+"']","xpath");
     }
 
 }

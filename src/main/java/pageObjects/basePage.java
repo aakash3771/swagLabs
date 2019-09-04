@@ -1,7 +1,6 @@
 package pageObjects;
 
 import Utilities.ExplicitWait;
-import Utilities.GenericMethods;
 import Utilities.XMLReader;
 import Utilities.uiOperations;
 import io.qameta.allure.Step;
@@ -12,7 +11,6 @@ import org.openqa.selenium.WebDriver;
 public class basePage {
     WebDriver driver;
     uiOperations ops;
-    GenericMethods method;
     ExplicitWait please;
 
     private final By cartIcon = By.xpath(XMLReader.readPropertiesFile("//commonControls/cartIcon"));
@@ -26,8 +24,8 @@ public class basePage {
     basePage(WebDriver driver) throws DocumentException {
         this.driver = driver;
         ops = new uiOperations(driver);
-        method = new GenericMethods(driver);
         please = new ExplicitWait(driver, 50);
+        please.waitUntilPageLoadIsComplete();
     }
 
     /**
@@ -35,17 +33,17 @@ public class basePage {
      */
     public void clickAllItems()
     {
-        ops.performAction(driver, "click", allItems, "All Items", "");
+        ops.performAction("click", allItems, "All Items", "");
     }
 
     public void clickCloseLeftMenu()
     {
-        ops.performAction(driver, "click", closeLeftMenu, "Left Menu close icon", "");
+        ops.performAction("click", closeLeftMenu, "Left Menu close icon", "");
     }
 
     public void clickLogOut()
     {
-        ops.performAction(driver, "click", logOut, "Logout link", "");
+        ops.performAction("click", logOut, "Logout link", "");
     }
 
     /**
@@ -53,7 +51,7 @@ public class basePage {
      */
     public void clickAbout()
     {
-        ops.performAction(driver, "click", about, "About link", null);
+        ops.performAction("click", about, "About link", null);
     }
 
     /**
@@ -61,18 +59,18 @@ public class basePage {
      */
     @Step("Cart icon is clicked.")
     public cartPage clickCartIcon() throws DocumentException {
-        ops.performAction(driver, "click", cartIcon, "Cart icon", null);
+        ops.performAction("click", cartIcon, "Cart icon", null);
         return new cartPage(driver);
     }
 
     @Step("Left menu is opened.")
     public void clickLeftMenu()
     {
-        ops.performAction(driver, "click", leftMenu, "Left menu", null);
+        ops.performAction("click", leftMenu, "Left menu", null);
     }
 
     public String getNumberOfItemsInCart()
     {
-        return ops.performAction(driver, "getText", numberOfItems, "Cart icon", null);
+        return ops.performAction("getText", numberOfItems, "Cart icon", null);
     }
 }

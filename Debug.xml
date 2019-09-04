@@ -11,7 +11,7 @@
         <classes>
             <class name="TestClasses.LoginTests"/>
             <methods>
-                <!--include name="InvalidScenario"/-->
+                <include name="ValidateLockedOutUser"/>
             </methods>
         </classes>
     </test>

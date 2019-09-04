@@ -1,6 +1,7 @@
 package pageObjects;
 
 import Utilities.XMLReader;
+import Utilities.constants;
 import org.dom4j.DocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,12 +20,12 @@ public class checkoutOverviewPage extends basePage{
     }
 
     public productsPage clickCancel() throws DocumentException {
-        ops.performAction(driver, "click", cancel, "Cancel button", null);
+        ops.performAction(constants.click, cancel, "Cancel button", null);
         return new productsPage(driver);
     }
 
     public finishPage clickFinish() throws DocumentException {
-        ops.performAction(driver, "click", finish, "Finish button", null);
+        ops.performAction(constants.click, finish, "Finish button", null);
         return new finishPage(driver);
     }
 
@@ -34,32 +35,32 @@ public class checkoutOverviewPage extends basePage{
      */
     public boolean isProductInCart(String productName)
     {
-        return method.isElementPresent("//div[text()='"+productName+"']","xpath");
+        return ops.isElementPresent("//div[text()='"+productName+"']","xpath");
     }
 
     public String getPaymentInfo()
     {
-        return ops.performAction(driver, "getText", paymentInfo, "Payment section", null);
+        return ops.performAction(constants.getText, paymentInfo, "Payment section", null);
     }
 
     public String getShippingInfo()
     {
-        return ops.performAction(driver, "getText", shippingInfo, "Shipping section", null);
+        return ops.performAction(constants.getText, shippingInfo, "Shipping section", null);
     }
 
     public String getItemTotalInfo()
     {
-        return method.getSubString(ops.performAction(driver, "getText", itemTotalInfo, "Item Total", null), "$");
+        return ops.getSubString(ops.performAction(constants.getText, itemTotalInfo, "Item Total", null), "$");
     }
 
     public String getTaxInfo()
     {
-        return method.getSubString(ops.performAction(driver, "getText", taxInfo, "Tax info", null), "$");
+        return ops.getSubString(ops.performAction(constants.getText, taxInfo, "Tax info", null), "$");
     }
 
     public String getTotalInfo()
     {
-        return method.getSubString(ops.performAction(driver, "getText", totalInfo, "Total Amount", null), "$");
+        return ops.getSubString(ops.performAction(constants.getText, totalInfo, "Total Amount", null), "$");
     }
 
 }

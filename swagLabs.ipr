@@ -39,6 +39,9 @@
       </list>
     </option>
   </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="aakashgupta" />
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/swagLabs.iml" filepath="$PROJECT_DIR$/swagLabs.iml" />

@@ -37,15 +37,5 @@ public class folderHelper {
         }
         else
             System.out.println("Directory already exists: " + folderPath);
-
-        // Method to create sub directories
-            /*File files = new File("C:\\Directory2\\Sub2\\Sub-Sub2");
-            if (!files.exists()) {
-                if (files.mkdirs()) {
-                    System.out.println("Multiple directories are created!");
-                } else {
-                    System.out.println("Failed to create multiple directories!");
-                }
-            }*/
     }
 }

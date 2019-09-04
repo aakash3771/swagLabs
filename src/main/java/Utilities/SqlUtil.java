@@ -38,7 +38,7 @@ class SqlUtil {
 			// Execute a query
 			Statement stmt = getConnection().createStatement();
 
-			stmt.executeUpdate("RESTORE DATABASE " + databaseName + " FROM DISK = '"+ System.getProperty("user.dir") +"\\DB_Backup\\" + backUpFileName + "'\r\n"
+			stmt.executeUpdate("RESTORE DATABASE " + databaseName + " FROM DISK = '"+ pathHelpers.currentDir() +"\\DB_Backup\\" + backUpFileName + "'\r\n"
 					+ "WITH RECOVERY, " + "MOVE '" + dataFile + "' TO '" + System.getProperty("user.dir") +"\\DB_Backup\\" + dataFile + ".mdf',\r\n"
 					+ "MOVE '"+ logicalFile + "' TO '" + System.getProperty("user.dir") +"\\DB_Backup\\" + logicalFile + ".ldf';");
 			System.out.println("Database is restored successfully");

@@ -1,21 +1,21 @@
 package pageObjects;
 
 import Utilities.XMLReader;
+import Utilities.constants;
 import org.dom4j.DocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class finishPage extends basePage{
-    private final By successMessage = By.xpath(XMLReader.readPropertiesFile("//finishPage/successMessage"));
-
+    private final String successMessage = XMLReader.readPropertiesFile("//finishPage/successMessage");
+    private final String pageTitle = XMLReader.readPropertiesFile("//finishPage/pageTitle");
     finishPage(WebDriver driver) throws DocumentException {
         super(driver);
-        By pageTitle = By.xpath(XMLReader.readPropertiesFile("//finishPage/pageTitle"));
-        please.waitForVisibilityOfControl(driver.findElement(pageTitle));
+        please.waitForVisibilityOfControl(pageTitle, constants.xpath);
     }
 
     public String getSuccessMessage()
     {
-        return ops.performAction(driver, "getText", successMessage, "Success message", null);
+        return ops.performAction(constants.getText, successMessage, constants.xpath, "Success message", null);
     }
 }

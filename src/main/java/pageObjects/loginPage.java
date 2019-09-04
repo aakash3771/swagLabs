@@ -1,6 +1,7 @@
 package pageObjects;
 
 import Utilities.XMLReader;
+import Utilities.constants;
 import org.dom4j.DocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,21 +18,21 @@ public class loginPage extends basePage{
     }
 
     public void setUserName(String userName) {
-        ops.performAction(driver, "type", usernameLocator, "username", userName);
+        ops.performAction(constants.type, usernameLocator, "username", userName);
     }
 
     public void setPasswordLocator(String passwordText) {
-        ops.performAction(driver, "type", passwordLocator, "password", passwordText);
+        ops.performAction(constants.type, passwordLocator, "password", passwordText);
     }
 
     public productsPage clickLoginButton() throws DocumentException {
-        ops.performAction(driver, "click", loginButtonLocator, "Login button", "");
+        ops.performAction(constants.click, loginButtonLocator, "Login button", "");
         return new productsPage(driver);
     }
 
     public String getErrorMessageLocator()
     {
-        return ops.performAction(driver, "getText", errorMessageLocator, "", "");
+        return ops.performAction(constants.getText, errorMessageLocator, "", "");
     }
 
     public void login(String username, String passwordText) throws DocumentException {

@@ -1,10 +1,7 @@
 package Utilities;
 
 import drivers.driverFactory;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,6 +13,7 @@ public class ExplicitWait {
 	private WebDriver driver;
 	private WebDriverWait wait;
 	private FluentWait<WebDriver> fluentWait;
+	uiOperations ops;
 
 	public ExplicitWait(WebDriver driver, long timeOut) {
 		this.driver = driver;
@@ -24,28 +22,19 @@ public class ExplicitWait {
 				.pollingEvery(Duration.ofMillis(600))
 				.ignoring(NoSuchElementException.class);
 		wait = new WebDriverWait(driver, timeOut);
+		ops = new uiOperations(driver);
 	}
 
-	public WebElement waitforPresenceOfElement(WebDriver driver, By locator) {
+	public WebElement waitforPresenceOfElement(By locator) {
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 	}
 
-	public WebElement waitforElementToBeClickable(WebDriver driver, By locator) {
-		if(wait == null)
-			initializeWait(driver);
+	public WebElement waitforElementToBeClickable(By locator) {
 		return wait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 
-	public boolean waitforTextToAppear(WebDriver driver, By locator, String text) {
-		if(wait == null)
-			initializeWait(driver);
+	public boolean waitforTextToAppear(By locator, String text) {
 		return wait.until(ExpectedConditions.textToBe(locator, text));
-	}
-
-	private void initializeWait(WebDriver driver)
-	{
-		long timeOut = 20;
-		wait = new WebDriverWait(driver, timeOut);
 	}
 
 	public void waitForInvisibilityOfControl(WebElement control)
@@ -53,8 +42,28 @@ public class ExplicitWait {
 		fluentWait.until(ExpectedConditions.invisibilityOf(control));
 	}
 
+	public void waitForVisibilityOfControl(String locator, String type)
+	{
+		fluentWait.until(ExpectedConditions.visibilityOf(ops.getElement(locator, type)));
+	}
+
+	public void waitForVisibilityOfControl(By locator)
+	{
+		fluentWait.until(ExpectedConditions.visibilityOf(ops.getElement(locator)));
+	}
+
 	public void waitForVisibilityOfControl(WebElement control)
 	{
 		fluentWait.until(ExpectedConditions.visibilityOf(control));
+	}
+
+	public boolean waitForStalenessOfControl(WebElement control)
+	{
+		return fluentWait.until(ExpectedConditions.stalenessOf(control));
+	}
+
+	public void waitUntilPageLoadIsComplete(){
+		wait.until(webDriver -> ((JavascriptExecutor)webDriver).
+				executeScript("return document.readyState").equals("complete"));
 	}
 }

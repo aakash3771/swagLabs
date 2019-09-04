@@ -1,8 +1,10 @@
-<suite name="Parallel" parallel="classes" thread-count="2">
+<suite name="Parallel" parallel="tests" thread-count="2">
 
     <listeners>
         <listener class-name="Utils.listener.customListener"/>
         <listener class-name="Utils.listener.AnnotationTransformer"/>
+        <listener class-name="Utils.listener.customReporter"/>
+        <listener class-name="Utils.listener.customTestNGListener"/>
     </listeners>
 
     <test name="Validating full functionality on firefox">
@@ -12,6 +14,13 @@
             <class name="TestClasses.LoginTests"/>
         </classes>
     </test>
+
+    <listeners>
+        <listener class-name="Utils.listener.customListener"/>
+        <listener class-name="Utils.listener.AnnotationTransformer"/>
+        <listener class-name="Utils.listener.customReporter"/>
+        <listener class-name="Utils.listener.customTestNGListener"/>
+    </listeners>
 
     <test name="Validating full functionality on chrome">
         <parameter name="browser" value="chrome" />

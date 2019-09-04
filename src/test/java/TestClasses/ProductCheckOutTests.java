@@ -10,7 +10,7 @@ import pageObjects.*;
 
 public class ProductCheckOutTests extends BaseTest {
 
-    @Test(priority = 1, dataProvider = "productSearch")
+    @Test(priority = 1, dataProvider = "productSearch", threadPoolSize = 1, invocationCount = 40)
     public void ProductSearch(String username, String password, String productName, String quantityOfProduct,
                               String firstName, String lastName, String zipCode, String itemTotal, String totalInfo,
                               String taxInfo, String shippingInfo, String paymentInfo, String successMessage) throws DocumentException {

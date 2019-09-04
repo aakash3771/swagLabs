@@ -41,7 +41,7 @@ public class driverFactory {
 		case "firefox":
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-			log.info("Driver selected is chrFirefoxome");
+			log.info("Driver selected is firefox");
 			//System.out.println("Driver selected is Firefox");
 			break;
 		case "IE":
@@ -63,19 +63,11 @@ public class driverFactory {
 		DesiredCapabilities caps = new DesiredCapabilities();
 
 		// Platforms
-		if (platform.equalsIgnoreCase("Windows")) {
-			caps.setPlatform(Platform.WINDOWS);
-		}
-		if (platform.equalsIgnoreCase("MAC")) {
-			caps.setPlatform(Platform.MAC);
-		}
+		if (platform.equalsIgnoreCase("Windows")) caps.setPlatform(Platform.WINDOWS);
+		if (platform.equalsIgnoreCase("MAC")) caps.setPlatform(Platform.MAC);
 		// Browsers
-		if (browser.equalsIgnoreCase("chrome")) {
-			caps = DesiredCapabilities.chrome();
-		}
-		if (browser.equalsIgnoreCase("firefox")) {
-			caps = DesiredCapabilities.firefox();
-		}
+		if (browser.equalsIgnoreCase("chrome")) caps = DesiredCapabilities.chrome();
+		if (browser.equalsIgnoreCase("firefox")) caps = DesiredCapabilities.firefox();
 		// Version
 		//caps.setVersion(version);
 		driver = new RemoteWebDriver(new URL(nodeURL), caps);

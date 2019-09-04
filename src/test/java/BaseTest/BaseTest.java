@@ -32,16 +32,17 @@ public WebDriver getDriver()
 	}
 
 	@AfterMethod(alwaysRun = true)
-	public void TearDown() {
-        driver.quit();
+	public synchronized void TearDown() {
+		driver.quit();
 	}
 
 	@Parameters({ "platform","browser", "nodeURL" })
 	@BeforeMethod(alwaysRun=true)
-	public void startUp(@Optional("Mac") String platform, @Optional("chrome") String browser, @Optional(" ") String nodeURL) throws MalformedURLException {
+	public synchronized void startUp(@Optional("Mac") String platform, @Optional("chrome") String browser,
+									 @Optional(" ") String nodeURL) throws MalformedURLException {
 		if (PropertyReader.readApplicationFile("type").equals("solo"))
 			driver = new driverFactory().getDriver(browser);
 		if (PropertyReader.readApplicationFile("type").equals("seleniumgrid"))
-		driver = new driverFactory().getRemoteDriver(platform, browser, nodeURL);
+			driver = new driverFactory().getRemoteDriver(platform, browser, nodeURL);
 	}
 }
